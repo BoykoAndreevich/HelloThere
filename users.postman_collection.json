@@ -1,0 +1,401 @@
+{
+	"info": {
+		"_postman_id": "31ce77e0-c126-44ec-9db3-fcea1128b6cc",
+		"name": "users",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users/createUsers",
+			"item": [
+				{
+					"name": "users/createUsers/201",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 2,\r\n  \"name\": \"vlad\",\r\n  \"email\": \"anton@hotmai.com\",\r\n  \"birthDate\": \"1-09-1991\",\r\n  \"address\": {\r\n    \"id\": 1,\r\n    \"street\": \"cale mandin\",\r\n    \"state\": \"valencia\",\r\n    \"city\": \"valencia\",\r\n    \"country\": \"spain\",\r\n    \"zip\": \"46010\"\r\n  }\r\n}\r\n"
+						},
+						"url": {
+							"raw": "localhost:9000/users/createUsers",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"users",
+								"createUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users/createUsers/405",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:9000/users/createUsers",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"users",
+								"createUsers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users/getusersById",
+			"item": [
+				{
+					"name": "users/getusersById/400",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"name\": \"alex\",\r\n  \"email\": \"pando@hotmai.com\",\r\n  \"birthDate\": \"12-031991\",\r\n  \"address\": {\r\n    \"id\": 0,\r\n    \"street\": \"cale salamanadxca\",\r\n    \"state\": \"valencia\",\r\n    \"city\": \"valencia\",\r\n    \"country\": \"spain\",\r\n    \"zip\": \"33212\"\r\n  }\r\n}\r\n"
+						},
+						"url": {
+							"raw": "localhost:9000/users/getusersById/sf",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"users",
+								"getusersById",
+								"sf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users/getusersById/200",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"name\": \"alex\",\r\n  \"email\": \"pando@hotmai.com\",\r\n  \"birthDate\": \"12-031991\",\r\n  \"address\": {\r\n    \"id\": 0,\r\n    \"street\": \"cale salamanadxca\",\r\n    \"state\": \"valencia\",\r\n    \"city\": \"valencia\",\r\n    \"country\": \"spain\",\r\n    \"zip\": \"33212\"\r\n  }\r\n}\r\n"
+						},
+						"url": {
+							"raw": "localhost:9000/users/getusersById/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"users",
+								"getusersById",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users/getusersById/404",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 1,\r\n  \"name\": \"alex\",\r\n  \"email\": \"pando@hotmai.com\",\r\n  \"birthDate\": \"12-031991\",\r\n  \"address\": {\r\n    \"id\": 0,\r\n    \"street\": \"cale salamanadxca\",\r\n    \"state\": \"valencia\",\r\n    \"city\": \"valencia\",\r\n    \"country\": \"spain\",\r\n    \"zip\": \"33212\"\r\n  }\r\n}\r\n"
+						},
+						"url": {
+							"raw": "localhost:9000/users/getusersById/5",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"users",
+								"getusersById",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users/updateUsersById",
+			"item": [
+				{
+					"name": "users/updateUsersById/200",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 4,\r\n  \"name\": \"alex\",\r\n  \"email\": \"pando@hotmai.com\",\r\n  \"birthDate\": \"12-03-1994\",\r\n  \"address\": {\r\n    \"id\": 0,\r\n    \"street\": \"cale salamanca\",\r\n    \"state\": \"valencia\",\r\n    \"city\": \"valencia\",\r\n    \"country\": \"spain\",\r\n    \"zip\": \"33212\"\r\n  }\r\n}\r\n"
+						},
+						"url": {
+							"raw": "localhost:9000/users/updateUsersById/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"users",
+								"updateUsersById",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users/updateUsersById/400",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 4,\r\n  \"name\": \"alex\",\r\n  \"email\": \"pando@hotmai.com\",\r\n  \"birthDate\": \"12-03-1994\",\r\n  \"address\": {\r\n    \"id\": 0,\r\n    \"street\": \"cale salamanca\",\r\n    \"state\": \"valencia\",\r\n    \"city\": \"valencia\",\r\n    \"country\": \"spain\",\r\n    \"zip\": \"33212\"\r\n  }\r\n}\r\n"
+						},
+						"url": {
+							"raw": "localhost:9000/users/updateUsersById/sd",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"users",
+								"updateUsersById",
+								"sd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users/updateUsersById/404",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 4,\r\n  \"name\": \"alex\",\r\n  \"email\": \"pando@hotmai.com\",\r\n  \"birthDate\": \"12-03-1994\",\r\n  \"address\": {\r\n    \"id\": 0,\r\n    \"street\": \"cale salamanca\",\r\n    \"state\": \"valencia\",\r\n    \"city\": \"valencia\",\r\n    \"country\": \"spain\",\r\n    \"zip\": \"33212\"\r\n  }\r\n}\r\n"
+						},
+						"url": {
+							"raw": "localhost:9000/users/updateUsersById/5",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"users",
+								"updateUsersById",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users/deleteUsersById",
+			"item": [
+				{
+					"name": "users/deleteUsersById/200",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 4,\r\n  \"name\": \"alex\",\r\n  \"email\": \"pando@hotmai.com\",\r\n  \"birthDate\": \"12-03-1994\",\r\n  \"address\": {\r\n    \"id\": 0,\r\n    \"street\": \"cale salamanca\",\r\n    \"state\": \"valencia\",\r\n    \"city\": \"valencia\",\r\n    \"country\": \"spain\",\r\n    \"zip\": \"33212\"\r\n  }\r\n}\r\n"
+						},
+						"url": {
+							"raw": "localhost:9000/users/deleteUsersById/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"users",
+								"deleteUsersById",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users/deleteUsersById/400",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 4,\r\n  \"name\": \"alex\",\r\n  \"email\": \"pando@hotmai.com\",\r\n  \"birthDate\": \"12-03-1994\",\r\n  \"address\": {\r\n    \"id\": 0,\r\n    \"street\": \"cale salamanca\",\r\n    \"state\": \"valencia\",\r\n    \"city\": \"valencia\",\r\n    \"country\": \"spain\",\r\n    \"zip\": \"33212\"\r\n  }\r\n}\r\n"
+						},
+						"url": {
+							"raw": "localhost:9000/users/deleteUsersById/fs",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"users",
+								"deleteUsersById",
+								"fs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users/deleteUsersById/404",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 4,\r\n  \"name\": \"alex\",\r\n  \"email\": \"pando@hotmai.com\",\r\n  \"birthDate\": \"12-03-1994\",\r\n  \"address\": {\r\n    \"id\": 0,\r\n    \"street\": \"cale salamanca\",\r\n    \"state\": \"valencia\",\r\n    \"city\": \"valencia\",\r\n    \"country\": \"spain\",\r\n    \"zip\": \"33212\"\r\n  }\r\n}\r\n"
+						},
+						"url": {
+							"raw": "localhost:9000/users/deleteUsersById/6",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"users",
+								"deleteUsersById",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users/getusers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"name\": \"alex\",\r\n  \"email\": \"pando@hotmai.com\",\r\n  \"birthDate\": \"12-031991\",\r\n  \"address\": {\r\n    \"id\": 0,\r\n    \"street\": \"cale salamanadxca\",\r\n    \"state\": \"valencia\",\r\n    \"city\": \"valencia\",\r\n    \"country\": \"spain\",\r\n    \"zip\": \"33212\"\r\n  }\r\n}\r\n"
+				},
+				"url": {
+					"raw": "localhost:9000/users/getusers",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"users",
+						"getusers"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

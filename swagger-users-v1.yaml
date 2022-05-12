@@ -1,0 +1,138 @@
+openapi: 3.0.1
+info:
+  title: Users
+  description: Users API
+  version: 1.0.0
+servers:
+- url: http://api.users.es/users
+- url: https://api.users.es/users
+paths:
+  /getusers:
+    get:
+      description: Get all users
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/user'
+  /createUsers:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/user'
+        required: true
+      responses:
+        201:
+          description: CREATED
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/user'
+        405:
+          description: Invalid input
+          content: {}
+      x-codegen-request-body-name: user
+  /getusersById/{userId}:
+    get:
+      description: Get one user
+      parameters:
+      - name: userId
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/user'
+        400:
+          description: Invalid user id
+          content: {}
+        404:
+          description: User not found
+          content: {}
+  /updateUsersById/{userId}:
+    put:
+      parameters:
+      - name: userId
+        in: path
+        required: true
+        schema:
+          type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/user'
+        required: true
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/user'
+        400:
+          description: Invalid user id
+          content: {}
+        404:
+          description: User not found
+          content: {}
+      x-codegen-request-body-name: user
+  /deleteUsersById/{userId}:
+    delete:
+      parameters:
+      - name: userId
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        200:
+          description: OK
+          content: {}
+        400:
+          description: Invalid user id
+          content: {}
+        404:
+          description: User not found
+          content: {}
+components:
+  schemas:
+    user:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        email:
+          type: string
+        birthDate:
+          type: string
+        address:
+          $ref: '#/components/schemas/address'
+    address:
+      type: object
+      properties:
+        id:
+          type: integer
+        street:
+          type: string
+        state:
+          type: string
+        city:
+          type: string
+        country:
+          type: string
+        zip:
+          type: string

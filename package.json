@@ -1,0 +1,27 @@
+{
+  "name": "codechallenge-node",
+  "version": "1.0.0",
+  "description": "Users API",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2",
+    "express-openapi-validate": "^0.6.1",
+    "express-openapi-validator": "^4.13.5",
+    "js-yaml": "^4.1.0",
+    "nodemon": "^2.0.15",
+    "openapi-validator-middleware": "^3.2.4",
+    "path": "^0.12.7",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-ui-express": "^4.3.0"
+  },
+  "devDependencies": {
+    "jest": "^27.4.5"
+  }
+}
